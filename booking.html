@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <title>Cadastro Une</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./globalStyles.css">
+  <link rel="stylesheet" href="./components.css">
+  <!-- aos library css  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <!-- Nav Section -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav__wrapper">
+        <a href="./index.html" class="logo">
+          <img src="marcaune1.svg" alt="shaif's cuisine">
+        </a>
+        <nav>
+          <div class="nav__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-menu">
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </div>
+          <div class="nav__bgOverlay"></div>
+          <ol class="nav__list">
+            <div class="nav__close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </div>
+            <div class="nav__list__wrapper">
+
+              <li><a class="nav__link" href="./index.html">Inicio</a></li>
+              <li><a class="nav__link" href="./menu.html">Duvidas</a></li>
+              <li><a class="nav__link" href="./about.html">Suporte</a></li>
+              <li><a class="nav__link" href="./contact.html">Contatos</a></li>
+              <li><a href="./booking.html" class="btn primary-btn">Ouvidoria</a></li>
+            </div>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- End Nav Section -->
+  <!-- Booking Section -->
+  <section id="form" data-aos="fade-up">
+    <div class="container">
+      <h3 class="form__title">Formulario</h3>
+      <div class="form__wrapper">
+        <form name="booking" method="POST" netlify>
+          <div class="form__group">
+            <label for="firstName">Name</label>
+            <input type="text" id="firstName" name="First Name" required>
+          </div>
+          <div class="form__group">
+            <label for="lastName">Sobrenome</label>
+            <input type="text" id="lastName" name="Last Name" required>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form__group">
+            <label for="tableType">Numeros de usuarios</label>
+            <select name="Table Type" id="tableType" required>
+              <option selected disabled>Choose</option>
+              <option value="small">(2 Pessoas)</option>
+              <option value="medium">(4 Pessoas)</option>
+              <option value="large">(6 Pessoas)</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="guestNumber">Contato</label>
+            <input type="number" id="guestNumber" name="Guest Number"  required>
+          </div>
+          <div class="form__group">
+            <label for="placement">sexo</label>
+            <select name="Placement" id="placement">
+              <option selected disabled>Masculino</option>
+              <option value="outdoor">Feminino</option>
+              <option value="indoor">Indefinido</option>
+              <option value="rooftop">Recuso a dizer</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="date">Data de nascimento</label>
+            <input type="date" id="date" name="Date" required>
+          </div>
+        
+          <div class="form__group form__group__full">
+            <label for="note">Observações</label>
+            <textarea name="Note" id="note" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn primary-btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- End Booking Section -->
+  <!-- Footer -->
+  
+  <!-- aos scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- custom scripts -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
